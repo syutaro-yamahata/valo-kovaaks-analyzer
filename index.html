@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /><!-- 文字コードをUTF-8に指定（日本語対応） -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/><!-- スマホ・タブレット対応のレイアウト調整 -->
+  <title>VALO × KovaaK’s Dashboard</title><!-- ブラウザのタブに表示されるタイトル -->
+  <link rel="stylesheet" href="style.css" /><!--外部のCSSファイルを読み込んでスタイルを適用-->
+  <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container"> <!-- ページ全体を囲むコンテナ-->
+
+    <h1>VALO × KovaaK’s スキル分析アプリ</h1> <!-- ページの見出し　タイトル -->
+
+
+  <!-- VALORANT ID 入力欄と検索ボタン-->  
+  <div class="search-area">
+    <input type="text" id="valoIDInput" placeholder="Valorant ID を入力 (例: TenZ#NA1)" /> <!--ユーザーがIDを入力するテキストBOX-->
+    <button onclick="searchStats()">検索</button><!-- 検索ボタン。クリック時にsearchStats関数を実行-->
+  </div>
+
+  <!-- VALORANTの戦績表示エリア-->
+  <div class="stats-area">
+   <h2>戦績ダッシュボード</h2>
+   <p id="kd">K/D: -</p><!--キルデス比を表示　（初期状態は　”-”)-->
+   <p id="winRate">勝率: -</p><!-- 勝率を表示 -->
+   <p id="accuracy">ヘッドショット率: -</p><!-- ヘッドショット率を表示 -->
+  </div>
+
+
+
+  <!-- KovaaK's 成績表示エリア（グラフなどを表示予定） -->
+ <div class="kovaaks-area">
+  <h2>KovaaK's成績</h2>
+  <div id="chartArea">グラフ準備中...</div><!--グラフ描画用のスペース-->
+ </div>
+
+  <!-- KovaaK's のCSVファイルを読み込むエリア -->
+  <div class="kovaaks-upload-area">
+     <h2>KovaaK’s CSV 読み込み</h2>
+     <input type="file" id="csvFile" accept=".csv" /> <!--CSVファイルをアップロードするボタン-->
+     <button onclick="readCSV()">読み込む</button> <!-- クリックでreadCSV関数を実行-->
+     <pre id="csvOutput"></pre><!--表みたいに見せたいからPREで表示-->
+  </div>
+
+  <div class=" chart-container">
+     <h2>ヘッドショット率 推移グラフ</h2>
+     <canvas id="headshotChart" width="400" height="200" ></canvas>
+  </div>
+
+
+</div>
+
+<script src="main.js"></script><!-- JavaScriptファイル（main.js）を読み込む -->
+
+</body>
+</html>

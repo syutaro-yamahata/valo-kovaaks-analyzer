@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: valo-kovaaks-app
+    env: python
+    buildCommand: ""
+    startCommand: python app.py
+

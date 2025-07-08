@@ -1,0 +1,49 @@
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+.search-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.stats-area,
+.kovaaks-area {
+  margin-top: 20px;
+}
+#chartArea {
+  background: #e0e0e0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chart-container {
+  margin-top: 20px;
+}
