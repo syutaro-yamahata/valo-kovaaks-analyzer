@@ -21,6 +21,7 @@ def get_valorant_stats():
             }
         }]
     })
+#本番用コード
 # def get_valorant_stats():
 #     valo_id = request.args.get("id")
 #     if not valo_id:
